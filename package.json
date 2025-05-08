@@ -1,0 +1,16 @@
+{
+  "name": "backendwithjs",
+  "version": "1.0.0",
+  "description": "Project based on backend with Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "javascript",
+    "node"
+  ],
+  "author": "Jai Ganesh",
+  "license": "ISC"
+}
