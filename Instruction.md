@@ -51,3 +51,40 @@ and modify package.json
     }
 
 
+
+# Make Folders in /src
+
+    controllers: functionality
+    db: database connections
+    middlewares: codes that are needed to be run inbetween client and server
+    models: for creating the database schema
+    routes: for routing
+    utils: for utilities e.g. file uploading, mailing, tokens, etc
+
+    > mkdir controllers db middlewares models routes utils
+
+# Optional
+Install prettier
+
+    > npm i -D prettier
+
+add .prettierrc
+
+    {
+    "singleQuote": false,
+    "bracketSpacing": true,
+    "tabWidth": 2,
+    "semi": true,
+    "trailingComma": "all"
+    } 
+
+add .prettierignore
+
+    /.vscode
+    /node_modules
+    ./dist
+
+    *.env
+    .env
+    .env.*
+
