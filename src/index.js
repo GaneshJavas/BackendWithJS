@@ -1,6 +1,10 @@
 // Import environment variable loader
 import dotenv from "dotenv";
 
+import {app} from "./app.js"   
+
+
+
 // Import MongoDB connection function
 import connectDB from "./db/connections.js";
 
@@ -10,8 +14,20 @@ dotenv.config({
     path: './env'
 });
 
+// const app = express();
+
 // Connect to the database
-connectDB();
+connectDB() //whenever an asynchronous function (async function) is called, it always returns a Promise, whether you explicitly return a value or not.
+.then(() => {
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(`Server is running on Port: ${process.env.PORT}`);
+        
+    })
+})
+.catch((err) => {
+    console.log("MongoDB Connection Failed", err);
+    
+})
 
 
 
